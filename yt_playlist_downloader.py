@@ -1,7 +1,6 @@
-# Author: Kunal Kumar
-# Social: twitter.com/l1v1n9h311, instagram.com/prokunal
-# Website: procoder.in
-
+# Author: Viincci 
+# Social: github/viincci
+import os
 from pytube import YouTube
 from pytube import Playlist
 from math import ceil
@@ -31,31 +30,43 @@ link = list(split_link(links,size))
 print("Downloading Started...\n")
 def downloader1():
     for i in link[0]:
-      yt = YouTube(i)
-      ys = yt.streams.get_highest_resolution()
-      filename = ys.download()
-      print("threading 1 -->  " + filename.split('/')[-1] + ' Downloaded')
+        yt = YouTube(i)
+        ys = yt.streams.get_highest_resolution()
+        folder_name = p.title  # Get the playlist title
+        if not os.path.exists(folder_name):
+            os.makedirs(folder_name)
+        filename = ys.download(output_path=os.path.join(folder_name, ys.default_filename))  
+        print("threading 1 -->  " + filename.split('/')[-1] + ' Downloaded')
 
 def downloader2():
     for i in link[1]:
-      yt = YouTube(i)
-      ys = yt.streams.get_highest_resolution()
-      filename = ys.download()
-      print("threading 2 -->  " + filename.split('/')[-1] + ' Downloaded')
+        yt = YouTube(i)
+        ys = yt.streams.get_highest_resolution()
+        folder_name = p.title  # Get the playlist title
+        if not os.path.exists(folder_name):
+            os.makedirs(folder_name)
+        filename = ys.download(output_path=os.path.join(folder_name, ys.default_filename))  # Specify the full path
+        print("threading 2 -->  " + filename.split('/')[-1] + ' Downloaded')
 
 def downloader3():
     for i in link[2]:
-      yt = YouTube(i)
-      ys = yt.streams.get_highest_resolution()
-      filename = ys.download()
-      print("threading 3 -->  " + filename.split('/')[-1] + ' Downloaded')
+        yt = YouTube(i)
+        ys = yt.streams.get_highest_resolution()
+        folder_name = p.title  # Get the playlist title
+        if not os.path.exists(folder_name):
+            os.makedirs(folder_name)
+        filename = ys.download(output_path=os.path.join(folder_name, ys.default_filename))  
+        print("threading 3 -->  " + filename.split('/')[-1] + ' Downloaded')
 
 def downloader4():
     for i in link[3]:
-      yt = YouTube(i)
-      ys = yt.streams.get_highest_resolution()
-      filename = ys.download()
-      print("threading 4 -->  " + filename.split('/')[-1] + ' Downloaded')
+        yt = YouTube(i)
+        ys = yt.streams.get_highest_resolution()
+        folder_name = p.title  # Get the playlist title
+        if not os.path.exists(folder_name):
+            os.makedirs(folder_name)
+        filename = ys.download(output_path=os.path.join(folder_name, ys.default_filename))  
+        print("threading 4 -->  " + filename.split('/')[-1] + ' Downloaded')
 
 t1 = threading.Thread(target=downloader1, name='d1')
 t2 = threading.Thread(target=downloader2,name='d2')
