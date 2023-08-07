@@ -1,5 +1,6 @@
 # Smart-Youtube-Playlist-Downloader
-
+Original script by Kunal Kumar: [Link to Original Script](https://github.com/prokunal/Smart-Youtube-Playlist-Downloader)
+Modified by Viincci: [Link to Your Fork](https://github.com/viincci/Smart-Youtube-Playlist-Downloader)
 
 Download all videos from YouTube playlist.
 <h1>Features</h1>
